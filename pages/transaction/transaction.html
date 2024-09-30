@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Transação - Controle de gastos</title>
+    <title>Transaçao - Controle de gastos</title>
 
     <meta charset="UTF-8">
 </head>
@@ -14,7 +14,7 @@
     <main class="centralize">
         <form>
             <div class="form-field">
-                <div><label>Transação *</label></div>
+                <div><label>Transaçao *</label></div>
                 <input type="radio" name="type" checked id="expense">
                 <label for="expense">Despesa</label>
                 <input type="radio" name="type" id="income">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="form-field">
-                <div><label>Tipo de transação *</label></div>
+                <div><label>Tipo de transaçao *</label></div>
                 <select onchange="onChangeTransactionType()" id="transaction-type">
                     <option value="">-- Selecione um tipo de transação --</option>
                     <option>Acomodação</option>
@@ -57,14 +57,17 @@
                     <option>Transporte</option>
                 </select>
                 <div class="error" id="transaction-type-required-error">
-                    Tipo de transação é obrigatória
+                    Tipo de transação é obrigatório
                 </div>
             </div>
             <div class="form-field">
-                <div><label>Descrição</label></div>
+                <div><label>Descriçao</label></div>
                 <input type="text" id="description">
             </div>
-            <button type="button" class="solid" disabled id="save-button" onclick="saveTransaction()">Salvar</button>
+            <button type="button" class="solid" disabled id="save-button"
+                onclick="saveTransaction()">
+                Salvar
+            </button>
             <button type="button" class="clear">Cancelar</button>
         </form>
     </main>
@@ -79,6 +82,7 @@
 <script src="../../firebase-init.js"></script>
 <script src="../../auth-guard.js"></script>
 <script src="../../loading.js"></script>
+<script src="../../services/transaction.service.js"></script>
 <script src="transaction.js"></script>
 
 </html>
